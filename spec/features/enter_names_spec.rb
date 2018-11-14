@@ -7,6 +7,4 @@ feature 'Name entry' do
     expect(page).to have_content "A Name"
     expect(page).to have_content "Another Name"
   end
-
-
 end
