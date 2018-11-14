@@ -2,7 +2,11 @@
 <h2>There is nowhere left to run...</h2>
 <h2>For today...</h2>
 <h1><%= @player_1_name %></h1>
-<h2><%= @player_1_name %>'s hits:</h2>
+<h2><%= @player_1_name %>'s hits:10</h2>
 <h3>battles</h3>
 <h1><%= @player_2_name %></h1>
-<h2><%= @player_2_name %>'s hits:</h2>
+<h2><%= @player_2_name %>'s hits:10</h2>
+
+<form action='/attack'>
+<input type="submit" value="Attack Player 2">
+</form>
