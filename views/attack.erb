@@ -1,5 +1,13 @@
+<% if @game.player_2.hp > 0 %>
+
 <h1><%= @game.player_1.name %> hit <%= @game.player_2.name %>!</h1>
+<h2>10 health points lost!</h2>
 <h2><%= @game.player_2.name %>'s health: <%= @game.player_2.hp %></h2>
 <form action='/p2_turn'>
 <input type="submit" value="Continue the battle">
 </form>
+
+<% else %>
+<h1><%= @game.player_2.name %> has been defeated</h1>
+
+<% end %>
