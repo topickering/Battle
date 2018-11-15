@@ -1,19 +1,21 @@
 require_relative 'game'
+require_relative 'attack'
 
 class Player
 
-  attr_reader :name, :hp
+  attr_reader :name, :hp, :attack
 
   DEFAULT_NAME = 'Player'
   DEFAULT_HP = 50
 
-  def initialize(name = DEFAULT_NAME, hp = DEFAULT_HP)
+  def initialize(name = DEFAULT_NAME, hp = DEFAULT_HP, attack = Attack.new)
     @name = name
     @hp = hp
+    @attack = attack
   end
 
   def hit_by_opponent
-    @hp -= 10
+    @hp -= @attack.standard_attack
   end
 
 end
