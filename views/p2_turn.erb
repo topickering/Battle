@@ -7,5 +7,9 @@
 <h2><%= @game.player_2.name %>, it's your turn to attack!</h2>
 
 <form action='/p2_attack'>
-<input type="submit" value="Attack <%= @game.player_1.name %>">
+<input type="submit" value="Standard Attack">
+</form>
+
+<form action='/p2_risky_attack'>
+<input type="submit" value="High Risk Attack">
 </form>

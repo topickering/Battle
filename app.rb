@@ -38,12 +38,22 @@ class Battle < Sinatra::Base
     erb(:p2_attack)
   end
 
+  get '/p2_risky_attack' do
+    @game.risky_attack(@game.player_1)
+    erb(:p2_attack)
+  end
+
   get '/p1_turn' do
     erb(:p1_turn)
   end
 
   get '/p1_attack' do
     @game.attack(@game.player_2)
+    erb(:attack)
+  end
+
+  get '/p1_risky_attack' do
+    @game.risky_attack(@game.player_2)
     erb(:attack)
   end
 

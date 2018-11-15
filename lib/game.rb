@@ -13,6 +13,10 @@ attr_reader :player_1, :player_2
     opponent.hit_by_opponent
   end
 
+  def risky_attack(opponent)
+    opponent.risky_attack
+  end
+
   def self.create(player_1, player_2)
     @game = Game.new(player_1, player_2)
   end

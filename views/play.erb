@@ -10,7 +10,12 @@
 <h3><%= @game.player_2.name %>'s health: <%= @game.player_2.hp %> </h3>
 <h1></h1>
 <h2>Let's battle!</h2>
+<h2><%= @game.player_1.name %>, attack <%= @game.player_2.name %>!</h2>
 
-<form action='/attack'>
-<input type="submit" value="Attack <%= @game.player_2.name %>">
+<form action='/p1_attack'>
+<input type="submit" value="Standard Attack">
+</form>
+
+<form action='/p1_risky_attack'>
+<input type="submit" value="High Risk Attack">
 </form>

@@ -18,4 +18,8 @@ class Player
     @hp -= @attack.standard_attack
   end
 
+  def risky_attack
+    @hp -= @attack.high_risk
+  end
+
 end
