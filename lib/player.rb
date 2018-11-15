@@ -22,4 +22,8 @@ class Player
     @hp -= @attack.high_risk
   end
 
+  def sleep_attack
+    @hp -= @attack.sleep_attack
+  end
+
 end

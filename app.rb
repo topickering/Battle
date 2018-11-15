@@ -43,6 +43,11 @@ class Battle < Sinatra::Base
     erb(:p2_attack)
   end
 
+  get '/p2_sleep_attack' do
+    @game.sleep_attack(@game.player_1)
+    erb(:p2_attack)
+  end
+
   get '/p1_turn' do
     erb(:p1_turn)
   end
@@ -54,6 +59,11 @@ class Battle < Sinatra::Base
 
   get '/p1_risky_attack' do
     @game.risky_attack(@game.player_2)
+    erb(:attack)
+  end
+
+  get '/p1_sleep_attack' do
+    @game.sleep_attack(@game.player_2)
     erb(:attack)
   end
 
